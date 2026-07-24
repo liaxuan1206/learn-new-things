@@ -1,4 +1,4 @@
 interface:
-  display_name: "Learn New Things"
-  short_description: "Adaptive plans for concepts, skills, and exams"
-  default_prompt: "Use $learn-new-things to turn my learning goal into an adaptive plan and first study session."
+  display_name: "Learn New"
+  short_description: "Learn with teach-backs and guided questions"
+  default_prompt: "Use $learn-new to turn what I want to learn into a clear learning map, teach the first concept simply, and check my understanding."
