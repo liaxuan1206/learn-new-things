@@ -11,7 +11,8 @@ These rules apply to AI agents maintaining this repository.
 
 ## Learning model
 
-- Combine simple explanations, mastery checks, Feynman teach-backs, and Socratic questioning.
+- Teach before asking for interaction: for abstract concepts, prefer a story-led explanation, delayed concept reveal, formal decoding, metaphor mapping, and boundaries before mastery checks, Feynman teach-backs, or Socratic questioning.
+- Treat stories as bridges to precision, not substitutes for definitions, mechanisms, limitations, or counterexamples.
 - A learning map is a sequential path, not a mind map.
 - Every learning-map step states what to learn, how to learn it, expected time, dependencies, and observable completion evidence.
 - In Feynman mode, restate the learner’s meaning before identifying a gap.
