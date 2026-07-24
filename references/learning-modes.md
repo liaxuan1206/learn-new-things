@@ -3,12 +3,13 @@
 ## Contents
 
 1. Learning map
-2. Concept, skill, and exam paths
-3. Feynman Technique
-4. Socratic Method
-5. Diagnostics
-6. Cognitive calibration
-7. Session and check-in templates
+2. Story-first explanation
+3. Concept, skill, and exam paths
+4. Feynman Technique
+5. Socratic Method
+6. Diagnostics
+7. Cognitive calibration
+8. Session and check-in templates
 
 ## Learning map
 
@@ -26,13 +27,47 @@ For each step include:
 
 Keep the initial map small enough to begin immediately. Put optional enrichment after the core path.
 
+## Story-first explanation
+
+Use this protocol for an abstract concept when a narrative will make the underlying problem easier to feel before the terminology arrives.
+
+### Choose the concept
+
+- Select one bounded, field-appropriate concept at the learner's target depth. If the learner requests advanced study, the concept and final explanation should reach postgraduate-level precision.
+- Choose a concept with a real mechanism, tension, tradeoff, or failure mode that can be represented without becoming misleading.
+- Do not force this format onto a procedure, urgent answer, safety-critical instruction, or topic where an allegory would trivialize people or harm.
+
+### Narrative sequence
+
+1. **Story setup** — Create a fictional situation with a clear problem, two or more forces, and concrete consequences. Do not name the professional concept yet.
+2. **Pattern formation** — Let the learner notice the tension through events rather than through an early definition.
+3. **Delayed reveal** — Near the ending, name the concept and state the practical question it answers.
+4. **Formal decoding** — Give the precise definition, causal or logical mechanism, and relevant terminology.
+5. **Metaphor mapping** — Explicitly map each important character, object, event, and decision to the concept.
+6. **Boundary check** — State where the metaphor breaks, include at least one limitation or counterexample, and remind the learner that the story is not the concept itself.
+7. **Everyday transfer** — Keep one current-life example visible.
+8. **Interaction gate** — Only now begin retrieval, comparison, application, Feynman teach-back, or Socratic questioning.
+
+The learner may revisit completed story chapters, but later chapters should remain locked until reached so the reveal is not spoiled.
+
+### Quality test
+
+A story-first explanation is ready only when:
+
+- the story can be understood without specialist vocabulary;
+- the reveal feels earned rather than decorative;
+- every important metaphor has an explicit professional mapping;
+- the formal explanation is accurate even if the story is removed;
+- limitations and counterexamples prevent the metaphor from becoming a false model;
+- the first interactive question checks the concept rather than story trivia.
+
 ## Concept path
 
 Use this sequence:
 
-1. Name the practical question the concept answers.
-2. Identify minimum prerequisites.
-3. Give a plain-language mental model.
+1. Identify minimum prerequisites and the practical question the concept answers.
+2. Use the story-first explanation protocol when it improves understanding; otherwise give a direct plain-language model.
+3. Reveal and define the concept precisely.
 4. Show one canonical example and one boundary case.
 5. Ask for an unaided explanation.
 6. Ask the learner to compare it with the nearest confusing concept.
@@ -190,7 +225,9 @@ Time budget:
 
 ## Learn — 15–30 minutes
 
-- Plain-language model:
+- Story or direct explanation:
+- Concept reveal and formal definition:
+- Metaphor mapping:
 - Visible everyday example:
 - Boundary:
 
