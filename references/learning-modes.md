@@ -1,33 +1,52 @@
-# Learning Mode Playbooks
+# Learn New learning playbooks
 
 ## Contents
 
-1. Concept mode
-2. Skill mode
-3. Exam mode
-4. Diagnostics
-5. Session and check-in templates
+1. Learning map
+2. Concept, skill, and exam paths
+3. Feynman Technique
+4. Socratic Method
+5. Diagnostics
+6. Cognitive calibration
+7. Session and check-in templates
 
-## Concept Mode
+## Learning map
+
+A learning map is the concrete order of study, not a conceptual mind map.
+
+For each step include:
+
+| Field | Requirement |
+| --- | --- |
+| Learn | One bounded concept, procedure, or capability |
+| Method | Explanation, example, retrieval, teach-back, problem, or artifact |
+| Time | A realistic estimate |
+| Complete when | Observable evidence, not confidence |
+| Depends on | Earlier knowledge required for this step |
+
+Keep the initial map small enough to begin immediately. Put optional enrichment after the core path.
+
+## Concept path
 
 Use this sequence:
 
 1. Name the practical question the concept answers.
-2. Identify the minimum prerequisites.
+2. Identify minimum prerequisites.
 3. Give a plain-language mental model.
 4. Show one canonical example and one boundary case.
 5. Ask for an unaided explanation.
-6. Ask the learner to apply the idea to a fresh example.
-7. Record the misconception exposed by the attempt.
+6. Ask the learner to compare it with the nearest confusing concept.
+7. Ask the learner to apply it to a fresh example.
+8. Record the misconception exposed by the attempt.
 
 Evidence of mastery should include:
 
 - an explanation without notes;
-- a comparison with the nearest confusing concept;
-- a correct application to a new case;
+- a correct comparison;
+- application to a changed case;
 - one stated limitation or boundary.
 
-## Skill Mode
+## Skill path
 
 Organize practice as increasingly independent artifacts:
 
@@ -39,7 +58,7 @@ Organize practice as increasingly independent artifacts:
 
 Prefer one portfolio-quality artifact over many disconnected tutorials.
 
-## Exam Mode
+## Exam path
 
 ### Triage
 
@@ -52,34 +71,111 @@ Score each topic from 0 to 3 on:
 
 Prioritize high-weight, high-prerequisite, weak topics with a realistic improvement time.
 
-### Schedule
+### Suggested schedule
 
-- `30%` concept repair and worked examples.
-- `50%` retrieval practice, problems, or past papers.
+- `30%` concept repair and worked examples;
+- `50%` retrieval practice, problems, or past papers;
 - `20%` error correction and spaced review.
 
-Adjust the ratio if the diagnostic shows severe prerequisite gaps.
+Adjust the ratio when diagnostics show severe prerequisite gaps.
 
-### Final 48 Hours
+### Final 48 hours
 
 - Use representative timed questions.
-- Review the error log, not the entire textbook.
+- Review the cognitive calibration record, not the whole textbook.
 - Rehearse definitions, procedures, and high-yield distinctions from memory.
-- Stop adding low-yield new topics when they displace consolidation.
+- Stop adding low-yield topics when they displace consolidation.
+- Preserve sleep.
+
+## Feynman Technique
+
+Use Feynman mode after the learner has received a simple explanation and passed or attempted a first mastery check.
+
+### Prompt
+
+Ask the learner to teach the concept to an intelligent beginner:
+
+```text
+Pretend I am a curious beginner. Explain this concept in your own words.
+Do not use the source text. Include one example and tell me where the idea stops applying.
+```
+
+### Feedback
+
+Respond in this order:
+
+1. **What I heard** — restate the learner’s meaning faithfully.
+2. **What is clear** — identify the accurate part.
+3. **What is missing or fuzzy** — choose the highest-value gap.
+4. **Teach me this part** — ask one focused question.
+5. **Try a new case** — request transfer after the repair.
+
+Do not silently repair the learner’s explanation in the restatement. Otherwise the learner cannot see the gap.
+
+### Completion evidence
+
+- accurate explanation without source language;
+- correct causal or logical connection;
+- useful example;
+- recognized boundary;
+- successful transfer to a new case.
+
+## Socratic Method
+
+Use Socratic mode when the learner benefits from examining assumptions or building the answer themselves.
+
+### Question ladder
+
+Choose one question at a time:
+
+1. **Clarify:** What do you mean by this term?
+2. **Assumption:** What must be true for that claim to hold?
+3. **Evidence:** What observation would support or weaken it?
+4. **Alternative:** What other explanation could fit?
+5. **Boundary:** When would this rule fail?
+6. **Consequence:** If this were true, what else should we expect?
+7. **Transfer:** How would the answer change in a new case?
+
+### Difficulty control
+
+- After a strong answer, increase abstraction or introduce a boundary case.
+- After a partial answer, preserve the correct part and narrow the question.
+- After two failed attempts, give one small hint.
+- After repeated struggle, repair the prerequisite with a short explanation, then resume questioning.
+
+### Completion evidence
+
+Summarize the learner’s final reasoning chain and ask for one fresh application. Do not treat agreement with the AI as mastery.
 
 ## Diagnostics
 
-Create 3–7 items that sample different depths:
+Create 3–7 items sampling different depths:
 
-1. Recognition: identify the correct concept.
-2. Recall: explain it without prompts.
-3. Procedure: complete a representative task.
-4. Transfer: apply it in a changed context.
-5. Misconception: explain why a tempting wrong answer fails.
+1. Recognition — identify the correct concept.
+2. Recall — explain without prompts.
+3. Procedure — complete a representative task.
+4. Transfer — apply it in a changed context.
+5. Misconception — explain why a tempting wrong answer fails.
 
-Do not make the diagnostic so long that it becomes the study session.
+Keep the diagnostic shorter than the learning session.
 
-## Session Template
+## Cognitive calibration
+
+Use an adult, professional record rather than a childish “wrong-answer notebook.”
+
+Record:
+
+| Field | Example |
+| --- | --- |
+| Demonstrated strength | Explains the core mechanism clearly |
+| Priority improvement | Confuses correlation with causation |
+| Evidence | Failed to predict the boundary case |
+| Repair | Compare two counterexamples |
+| Next review | Tomorrow, then three days later |
+
+Distinguish knowledge gaps, procedure gaps, transfer gaps, careless errors, and time pressure.
+
+## Session template
 
 ```markdown
 ## Session target
@@ -94,35 +190,42 @@ Time budget:
 
 ## Learn — 15–30 minutes
 
-- One bounded source or explanation:
-- One worked example:
+- Plain-language model:
+- Visible everyday example:
+- Boundary:
 
-## Retrieve — 10 minutes
+## Check — 10 minutes
 
-- Close notes and answer:
+- Retrieve without notes:
+- Compare:
+- Apply:
 
-## Apply — 15–30 minutes
+## Deep learning — 15–30 minutes
 
-- New problem or artifact:
+- Mode: Feynman / Socratic
+- Explanation or reasoning:
+- Highest-value gap:
+- Follow-up:
 
-## Reflect — 5 minutes
+## Calibrate — 5 minutes
 
-- Error:
-- Correction:
-- Confidence before/after:
+- Demonstrated strength:
+- Priority improvement:
+- Evidence:
 - Next review:
 ```
 
-## Check-in Template
+## Check-in template
 
 Ask the learner to return:
 
 ```markdown
 Completed:
 Could explain without notes:
+New example I could handle:
 Got wrong or could not finish:
 Time actually spent:
-Artifact, answers, or error log:
+Answer, artifact, or reasoning trace:
 ```
 
-Use this evidence to shorten, extend, or reorder the next plan.
+Use this evidence to shorten, extend, or reorder the next learning map.
