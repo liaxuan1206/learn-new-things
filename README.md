@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  A warm AI learning workspace powered by Feynman teach-backs and Socratic questioning.
+  A warm AI learning workspace that teaches through stories before Feynman teach-backs and Socratic questioning.
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 
 ## Animated Product Tour
 
-The preview below plays automatically and introduces the main Learn New experience: the digital desk, domain bookshelf, learning map, guided explanation, and deep-learning workspace.
+The preview below plays automatically and introduces the main Learn New experience: the digital desk, domain bookshelf, learning map, story-first explanation, and interactive learning workspace.
 
 > 中文：下面是自动循环播放的产品介绍，访客打开 README 就能看到 Learn New 的主要学习流程。
 
@@ -32,13 +32,15 @@ The preview below plays automatically and introduces the main Learn New experien
 
 ## What is Learn New?
 
-Learn New is an AI learning product for anyone trying to understand a new concept, field, or practical skill. It turns source materials, explanations, comprehension checks, and active recall into a learning path that can be completed and verified.
+Learn New is an AI learning product for anyone trying to understand a new concept, field, or practical skill. It turns source materials, story-led explanations, comprehension checks, and active recall into a learning path that can be completed and verified.
+
+Before asking the learner to interact, Learn New first makes the idea understandable. For abstract concepts, it can begin with an allegory, keep the professional name hidden until the story approaches its ending, and then decode the definition, mechanism, metaphor, limitations, and counterexamples. Only after that explanation does it ask the learner to retrieve, apply, and teach the idea back.
 
 Instead of ending with an AI answer, Learn New asks the learner to explain the idea back. The system listens like a student, restates what it understood, identifies missing or unclear parts, and continues with targeted questions.
 
 The first inspiration came from an exam-preparation experience: textbooks, key topics, and past papers were given to AI, which then guided revision through structured questions and teach-backs. Learn New expands that method beyond exams to lifelong learning.
 
-> 中文简述：Learn New 面向所有想学习新概念的人，不只服务于大学考试复习。它通过讲解、提问和复述，帮助用户把“看懂”变成真正理解。
+> 中文简述：Learn New 面向所有想学习新概念的人。它先用故事建立直觉，再揭示并完整拆解概念，最后通过提问和复述把“看懂”变成真正理解。
 
 ### Example learning goals
 
@@ -51,6 +53,12 @@ The first inspiration came from an exam-preparation experience: textbooks, key t
 ## The learning philosophy
 
 Learn New combines two complementary approaches in one learning loop.
+
+### Story-first explanation
+
+Abstract ideas become easier to enter when the learner first experiences the problem they were invented to explain. Learn New may start with a fictional story, reveal the professional concept near the ending, and then map every important character, event, and decision back to the formal model.
+
+The story is a bridge, not a substitute for accuracy. Every story-led lesson must follow with a precise definition, mechanism, metaphor mapping, limitations, and at least one boundary or counterexample. Procedural, safety-critical, or time-sensitive topics use a more direct explanation when a story would delay or distort the answer.
 
 ### Feynman Technique
 
@@ -73,7 +81,9 @@ Choose a field or import learning materials
                     ↓
 Analyze the topic and build a sequential learning map
                     ↓
-Explain one concept in simple language
+Build intuition through a story without naming the concept too early
+                    ↓
+Reveal the concept and decode its definition, mechanism, metaphors, and boundaries
                     ↓
 Run a comprehension check
                     ↓
@@ -88,11 +98,12 @@ Adjust the next learning step
 
 1. **Import or choose materials** — Start from a textbook, paper, note, or a built-in knowledge pack.
 2. **Build a learning map** — Create an ordered path showing what to learn, why it matters, how long it may take, and what counts as completion.
-3. **Learn simply** — Establish an intuitive mental model and keep a practical example visible.
-4. **Check understanding** — Let the learner decide when they are ready, then verify the claimed understanding.
-5. **Go deeper** — Switch between Feynman teach-back and Socratic questioning.
-6. **Receive teacher-style feedback** — The AI restates the learner’s meaning before addressing gaps.
-7. **Adapt the path** — Record learning evidence in a cognitive calibration profile and adjust what comes next.
+3. **Enter through a story** — For an abstract idea, experience the underlying problem before seeing the professional name.
+4. **Reveal and decode** — Connect the story to the formal definition, mechanism, metaphor mapping, limitations, and counterexamples.
+5. **Check understanding** — Verify retrieval and transfer only after the explanation is complete.
+6. **Go deeper** — Switch between Feynman teach-back and Socratic questioning.
+7. **Receive teacher-style feedback** — The AI restates the learner’s meaning before addressing gaps.
+8. **Adapt the path** — Record learning evidence in a cognitive calibration profile and adjust what comes next.
 
 ## Product experience
 
@@ -103,7 +114,8 @@ The web prototype is designed as a warm digital desk rather than a single chat w
 - a searchable domain bookshelf with built-in learning topics;
 - support for importing personal materials;
 - a sequential learning map;
-- simple explanation and comprehension-check stages;
+- a three-part story-first explanation: narrative setup, delayed concept reveal, and formal decoding;
+- a separate comprehension check before interactive learning;
 - visible Feynman and Socratic learning modes;
 - a learning center with progress, strengths, improvement areas, and guidance;
 - learning preferences, AI personality settings, privacy, and API configuration;
@@ -119,7 +131,7 @@ The web prototype is designed as a warm digital desk rather than a single chat w
 Use Learn New directly inside Codex as a structured learning workflow:
 
 ```text
-Use $learn-new to help me understand what an AI Agent is from scratch.
+Use $learn-new to help me understand what an AI Agent is from scratch with a story-first explanation.
 ```
 
 ```text
@@ -171,7 +183,7 @@ Restart Codex and invoke the Skill with `$learn-new`.
 
 ### `SKILL.md`
 
-The core instruction file for the learning workflow. It tells the AI when to activate Learn New, how to generate a learning map, how to teach and check understanding, and how to run Feynman or Socratic sessions.
+The core instruction file for the learning workflow. It tells the AI when to activate Learn New, how to generate a learning map, how to teach through a story and formal explanation, how to check understanding, and how to run Feynman or Socratic sessions.
 
 ### `agents/openai.yaml`
 
@@ -179,7 +191,7 @@ The interface metadata for the Skill. It controls how Learn New appears in the S
 
 ### `references/`
 
-Detailed teaching guidance loaded only when needed, including concept learning, practical skills, exam review, diagnostics, teach-backs, and Socratic questioning.
+Detailed teaching guidance loaded only when needed, including story-first explanations, concept learning, practical skills, exam review, diagnostics, teach-backs, and Socratic questioning.
 
 ### `AGENTS.md`
 
@@ -229,6 +241,7 @@ For a production product, add secure server-side authentication, database storag
 ## Project status
 
 - [x] Feynman teach-back and Socratic questioning Skill workflow
+- [x] Story-first explanation with delayed concept reveal and metaphor decoding
 - [x] Concept, practical-skill, and exam-learning scenarios
 - [x] Sequential learning maps and observable mastery evidence
 - [x] Responsive desktop and mobile prototype
@@ -255,6 +268,7 @@ For a production product, add secure server-side authentication, database storag
 Forks, self-hosted experiments, issues, and new learning scenarios are welcome. Useful directions include:
 
 - more natural Feynman teach-back feedback;
+- better story-to-concept mappings without sacrificing precision;
 - deeper but less frustrating Socratic questions;
 - document parsing and learning-map generation;
 - mature cognitive calibration for adult learners;
