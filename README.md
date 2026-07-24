@@ -20,6 +20,12 @@
   <a href="#project-status"><strong>Project Status</strong></a>
 </p>
 
+## Animated Product Tour
+
+The preview below plays automatically and introduces the main Learn New experience: the digital desk, domain bookshelf, learning map, guided explanation, and deep-learning workspace.
+
+> 中文：下面是自动循环播放的产品介绍，访客打开 README 就能看到 Learn New 的主要学习流程。
+
 <p align="center">
   <img src="./learn-new-demo.gif" alt="Animated preview of the Learn New learning experience" width="920" />
 </p>
@@ -184,7 +190,7 @@ Durable instructions for coding agents that maintain this project. It protects t
 ## Repository structure
 
 ```text
-learn-new-things/
+Learn-New/
 ├── README.md
 ├── SKILL.md
 ├── AGENTS.md
