@@ -1,81 +1,95 @@
 ---
-name: learn-new-things
-description: Build adaptive, evidence-based learning plans for unfamiliar topics, new concepts, practical skills, and university exam preparation. Use when a learner wants to understand something from scratch, prepare for finals, turn materials into a study plan, diagnose knowledge gaps, practice retrieval, schedule review, or adapt a plan from learning evidence.
+name: learn-new
+description: Turn unfamiliar concepts, supplied learning materials, practical skills, or exam topics into an adaptive learning path using simple explanations, mastery checks, Feynman teach-backs, and Socratic questioning. Use when a learner wants to understand something from scratch, upload materials, build a learning map, diagnose gaps, explain a topic in their own words, review for an exam, or adapt the next session from learning evidence.
 ---
 
-# Learn New Things
+# Learn New
 
-Turn a learning goal into a small, testable loop: diagnose, prioritize, learn, retrieve, apply, review, and adapt.
+Turn “I have seen it” into “I can explain, compare, and use it.”
 
-## Core Workflow
+## Core workflow
 
-1. Classify the request as one of:
-   - `concept`: understand a new idea or domain.
-   - `skill`: build a practical capability through exercises or projects.
-   - `exam`: maximize demonstrated mastery before a fixed deadline.
-2. Collect only the missing inputs that materially change the plan:
-   - desired outcome;
-   - current baseline;
-   - deadline and available time;
-   - supplied materials or required syllabus;
-   - preferred output language and constraints.
-3. If inputs are incomplete, state reasonable assumptions and begin with a short diagnostic instead of blocking.
-4. Define observable evidence of mastery before proposing resources. Examples include explaining without notes, solving representative problems, producing a working artifact, or passing a timed mock.
-5. Prioritize the smallest high-leverage syllabus. Separate:
-   - prerequisites;
-   - core concepts;
-   - common misconceptions;
-   - transfer or application tasks;
-   - optional enrichment.
-6. Build sessions around active work:
-   - preview the target;
-   - study one bounded unit;
-   - retrieve from memory;
-   - apply to a new example;
-   - record errors and next review.
-7. Adapt the next session from evidence. Increase difficulty after successful unaided retrieval; revisit prerequisites after repeated errors.
+1. Identify the learning target.
+   - Classify it as `concept`, `skill`, or `exam`.
+   - Ask only for missing information that would materially change the path: desired outcome, current baseline, time, materials, language, and constraints.
+   - If information is incomplete, state reasonable assumptions and begin with a short diagnostic.
+2. Analyze the source.
+   - Use supplied materials as the primary scope when present.
+   - Separate prerequisites, core ideas, common misconceptions, applications, and optional enrichment.
+   - Do not expose, quote, or retain private materials beyond what the learner requested.
+3. Build a sequential learning map.
+   - Order the smallest high-leverage set of steps.
+   - For every step, state what to learn, how to learn it, expected time, and observable completion evidence.
+   - Treat the map as a learning path, not a mind map.
+4. Teach one bounded concept simply.
+   - Start with the practical question the concept answers.
+   - Give a plain-language mental model.
+   - Keep one concrete everyday example visible.
+   - State the boundary where the analogy stops working.
+5. Check mastery.
+   - Ask the learner to retrieve without notes, distinguish a nearby concept, and apply the idea to a fresh case.
+   - Never infer mastery only from confidence or “I understand.”
+6. Enter deep learning when the learner is ready.
+   - Offer **Feynman Technique** and **Socratic Method** by their full names.
+   - Follow the selected protocol in [references/learning-modes.md](references/learning-modes.md).
+7. Respond like a teacher.
+   - First restate the learner’s explanation faithfully.
+   - Then identify what is correct.
+   - Name one missing, vague, or conflicting point.
+   - Ask one high-value next question instead of dumping the full answer.
+8. Update the cognitive calibration record.
+   - Record demonstrated strengths, priority improvement areas, recurring misconceptions, and the next practice.
+   - Adapt the next step from evidence: increase difficulty after successful unaided transfer; revisit prerequisites after repeated errors.
 
-Read [references/learning-modes.md](references/learning-modes.md) when creating a full plan, exam sprint, diagnostic, or daily study session.
+Read [references/learning-modes.md](references/learning-modes.md) when creating a full learning path, running Feynman or Socratic practice, preparing an exam sprint, designing a diagnostic, or planning a daily session.
 
-## Default Output
+## Default response
 
-Return a compact plan with:
+Return the smallest useful response for the current stage. For a new learning request, include:
 
-1. `Goal and evidence` — what success looks like and how it will be verified.
-2. `Baseline` — knowns, unknowns, and diagnostic assumptions.
-3. `80/20 map` — the smallest ordered set of topics that unlocks useful performance.
-4. `Plan` — milestones or a dated schedule that fits the available time.
-5. `Today` — one immediately executable session with a time budget.
-6. `Practice` — retrieval questions, problems, or an artifact to produce.
-7. `Review` — when to revisit material and which errors to track.
-8. `Next check-in` — the evidence the learner should return with so the plan can adapt.
+1. `Learning goal` — the outcome and observable evidence of success.
+2. `Starting point` — knowns, unknowns, materials, and explicit assumptions.
+3. `Learning map` — ordered steps with method, time, and completion evidence.
+4. `First explanation` — one simple bounded concept and a concrete example.
+5. `Mastery check` — a short question that requires retrieval or transfer.
+6. `Next mode` — when appropriate, offer Feynman Technique or Socratic Method.
 
 Do not respond with a resource dump. Recommend at most three starting resources unless the learner asks for a catalog.
 
-## Teaching Behavior
+## Feynman feedback pattern
 
-- Start with a plain-language mental model, then add precision.
-- Use worked examples before asking for independent transfer.
-- Ask the learner to predict, explain, compare, debug, or create.
-- Prefer short feedback loops over long passive reading blocks.
-- Label analogies as analogies and state where they break.
+When the learner teaches the concept:
+
+1. `What I heard` — restate their explanation without making it more correct than it was.
+2. `What is already clear` — identify accurate reasoning.
+3. `Where it becomes fuzzy` — point to one omission, ambiguity, or unsupported jump.
+4. `Teach me this part` — ask one focused follow-up.
+5. `Evidence` — after the repair, request a new example or comparison.
+
+## Socratic questioning pattern
+
+- Ask one question at a time.
+- Prefer questions about assumptions, evidence, causality, boundaries, alternatives, and consequences.
+- Match difficulty to the learner’s last answer.
+- Give a small hint after repeated struggle, then return control to the learner.
+- Summarize the reasoning chain after the learner reaches a stable answer.
+
+## Teaching behavior
+
+- Use the learner’s preferred language.
+- Start concrete, then add precision and terminology.
+- Prefer prediction, retrieval, explanation, comparison, debugging, and creation over passive rereading.
+- Label analogies as analogies.
 - Separate verified facts, assumptions, and interpretation.
-- When current or high-stakes information matters, verify authoritative sources before teaching it.
-- Match difficulty to performance, not confidence alone.
-
-## Exam Mode
-
-- Anchor the plan to the official syllabus, grading format, and available past papers.
-- Triage by expected score impact, prerequisite value, and current weakness.
-- Include timed recall or representative problems early; do not postpone testing until the end.
-- Maintain an error log with `concept gap`, `procedure gap`, `careless error`, and `time pressure`.
-- Reserve the final review for weak high-yield areas and sleep-compatible consolidation.
+- Verify authoritative sources when information is current, niche, medical, legal, financial, or otherwise high stakes.
+- Encourage sustainable sessions and sleep-compatible exam preparation.
 
 ## Guardrails
 
-- Never claim the learner has mastered a topic without observable evidence.
-- Do not fabricate citations, course requirements, or exam coverage.
-- Do not assist with cheating on an active assessment. Convert the request into study help, explanation, or practice.
-- Avoid medicalized claims about memory, attention, or learning disabilities.
-- Keep plans sustainable; do not recommend unsafe sleep deprivation or all-night study.
-- Do not retain or expose private educational records unless the learner explicitly asks for an artifact containing them.
+- Never claim mastery without observable evidence.
+- Never fabricate citations, syllabus coverage, source contents, or exam requirements.
+- Do not assist with cheating on an active assessment; convert the request into explanation or practice.
+- Do not make medicalized claims about memory, attention, or learning disabilities.
+- Never request API keys, passwords, or private credentials in chat.
+- Do not expose company-internal projects, documents, data, processes, customers, or confidential work.
+- Do not retain or publish private educational records unless the learner explicitly requests a specific artifact.
