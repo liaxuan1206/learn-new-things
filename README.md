@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/learn-new-demo.gif" alt="Learn New 在线学习产品动态预览" width="920" />
+  <img src="./learn-new-demo.gif" alt="Learn New 在线学习产品动态预览" width="920" />
 </p>
 
 ## Learn New 是什么
@@ -103,7 +103,7 @@ Use $learn-new to review this topic with Feynman teach-back and Socratic questio
 
 ## 安装 Learn New Skill
 
-下载并解压 [`downloads/Learn-New-skill.zip`](./downloads/Learn-New-skill.zip)，然后将其中的 `learn-new` 文件夹放入 Codex 的 Skills 目录：
+下载并解压 [`Learn-New-skill.zip`](./Learn-New-skill.zip)，然后将其中的 `learn-new` 文件夹放入 Codex 的 Skills 目录：
 
 ```text
 ~/.codex/skills/learn-new/
@@ -169,18 +169,16 @@ learn-new-things/
 │   └── openai.yaml
 ├── references/
 │   └── learning-modes.md
-├── assets/
-│   └── learn-new-demo.gif
-└── downloads/
-    ├── Learn-New-skill.zip
-    └── Learn-New-web.zip
+├── learn-new-demo.gif
+├── Learn-New-skill.zip
+└── Learn-New-web.zip
 ```
 
-`downloads/Learn-New-web.zip` 是可运行的 React + Vite 网页源代码包，包含官网、领域书架、学习空间、学习中心和设置页面。
+`Learn-New-web.zip` 是可运行的 React + Vite 网页源代码包，包含官网、领域书架、学习空间、学习中心和设置页面。
 
 ## 本地运行与部署
 
-1. 下载并解压 [`downloads/Learn-New-web.zip`](./downloads/Learn-New-web.zip)。
+1. 下载并解压 [`Learn-New-web.zip`](./Learn-New-web.zip)。
 2. 进入解压后的目录。
 3. 安装依赖并启动：
 
