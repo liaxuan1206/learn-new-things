@@ -1,4 +1,4 @@
 interface:
   display_name: "Learn New"
-  short_description: "Learn with teach-backs and guided questions"
-  default_prompt: "Use $learn-new to turn what I want to learn into a clear learning map, teach the first concept simply, and check my understanding."
+  short_description: "Story-first learning with teach-backs"
+  default_prompt: "Use $learn-new to build my learning map, teach the first concept through a story and formal explanation, then check my understanding."

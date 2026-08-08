@@ -1,6 +1,6 @@
 ---
 name: learn-new
-description: Turn unfamiliar concepts, supplied learning materials, practical skills, or exam topics into an adaptive learning path using simple explanations, mastery checks, Feynman teach-backs, and Socratic questioning. Use when a learner wants to understand something from scratch, upload materials, build a learning map, diagnose gaps, explain a topic in their own words, review for an exam, or adapt the next session from learning evidence.
+description: Turn unfamiliar concepts, supplied learning materials, practical skills, or exam topics into an adaptive learning path using story-first explanations, mastery checks, Feynman teach-backs, and Socratic questioning. Use when a learner wants to understand something from scratch, upload materials, build a learning map, diagnose gaps, explain a topic in their own words, review for an exam, or adapt the next session from learning evidence.
 ---
 
 # Learn New
@@ -21,11 +21,11 @@ Turn “I have seen it” into “I can explain, compare, and use it.”
    - Order the smallest high-leverage set of steps.
    - For every step, state what to learn, how to learn it, expected time, and observable completion evidence.
    - Treat the map as a learning path, not a mind map.
-4. Teach one bounded concept simply.
-   - Start with the practical question the concept answers.
-   - Give a plain-language mental model.
-   - Keep one concrete everyday example visible.
-   - State the boundary where the analogy stops working.
+4. Teach one bounded concept before asking for interaction.
+   - For an abstract concept, default to the story-first protocol in [references/learning-modes.md](references/learning-modes.md): begin with a fictional allegory, withhold the professional concept name until the story approaches its ending, then reveal and formally decode it.
+   - After the reveal, give the precise definition and mechanism, map every important story element to the concept, keep one concrete everyday example visible, and state limitations, boundaries, or counterexamples.
+   - Treat the story as a bridge to precision, never as a substitute for it.
+   - Use a direct explanation when the learner asks for one or when a story would delay, trivialize, or distort a procedural, safety-critical, high-stakes, or time-sensitive topic.
 5. Check mastery.
    - Ask the learner to retrieve without notes, distinguish a nearby concept, and apply the idea to a fresh case.
    - Never infer mastery only from confidence or “I understand.”
@@ -50,7 +50,7 @@ Return the smallest useful response for the current stage. For a new learning re
 1. `Learning goal` — the outcome and observable evidence of success.
 2. `Starting point` — knowns, unknowns, materials, and explicit assumptions.
 3. `Learning map` — ordered steps with method, time, and completion evidence.
-4. `First explanation` — one simple bounded concept and a concrete example.
+4. `First explanation` — for an abstract concept, a story-led explanation with delayed reveal, formal decoding, a concrete example, and a clear boundary; otherwise a direct bounded explanation.
 5. `Mastery check` — a short question that requires retrieval or transfer.
 6. `Next mode` — when appropriate, offer Feynman Technique or Socratic Method.
 

@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  A warm AI learning workspace powered by Feynman teach-backs and Socratic questioning.
+  A warm AI learning workspace that teaches through stories before Feynman teach-backs and Socratic questioning.
 </p>
 
 <p align="center">
@@ -15,14 +15,16 @@
 <p align="center">
   <a href="#install-the-skill"><strong>Install the Skill</strong></a>
   ·
-  <a href="#run-and-deploy-the-web-app"><strong>Run the Web App</strong></a>
+  <a href="#quick-start"><strong>Quick Start</strong></a>
   ·
   <a href="#project-status"><strong>Project Status</strong></a>
 </p>
 
+> **Current release:** a deployable full-stack vertical slice with real email sessions, account-scoped learning records, a server-side model proxy, and an evidence-based review loop. No frontend API keys.
+
 ## Animated Product Tour
 
-The preview below plays automatically and introduces the main Learn New experience: the digital desk, domain bookshelf, learning map, guided explanation, and deep-learning workspace.
+The preview below plays automatically and introduces the main Learn New experience: the digital desk, domain bookshelf, learning map, story-first explanation, and interactive learning workspace.
 
 > 中文：下面是自动循环播放的产品介绍，访客打开 README 就能看到 Learn New 的主要学习流程。
 
@@ -32,13 +34,15 @@ The preview below plays automatically and introduces the main Learn New experien
 
 ## What is Learn New?
 
-Learn New is an AI learning product for anyone trying to understand a new concept, field, or practical skill. It turns source materials, explanations, comprehension checks, and active recall into a learning path that can be completed and verified.
+Learn New is an AI learning product for anyone trying to understand a new concept, field, or practical skill. It turns source materials, story-led explanations, comprehension checks, and active recall into a learning path that can be completed and verified.
+
+Before asking the learner to interact, Learn New first makes the idea understandable. For abstract concepts, it can begin with an allegory, keep the professional name hidden until the story approaches its ending, and then decode the definition, mechanism, metaphor, limitations, and counterexamples. Only after that explanation does it ask the learner to retrieve, apply, and teach the idea back.
 
 Instead of ending with an AI answer, Learn New asks the learner to explain the idea back. The system listens like a student, restates what it understood, identifies missing or unclear parts, and continues with targeted questions.
 
 The first inspiration came from an exam-preparation experience: textbooks, key topics, and past papers were given to AI, which then guided revision through structured questions and teach-backs. Learn New expands that method beyond exams to lifelong learning.
 
-> 中文简述：Learn New 面向所有想学习新概念的人，不只服务于大学考试复习。它通过讲解、提问和复述，帮助用户把“看懂”变成真正理解。
+> 中文简述：Learn New 面向所有想学习新概念的人。它先用故事建立直觉，再揭示并完整拆解概念，最后通过提问和复述把“看懂”变成真正理解。
 
 ### Example learning goals
 
@@ -51,6 +55,12 @@ The first inspiration came from an exam-preparation experience: textbooks, key t
 ## The learning philosophy
 
 Learn New combines two complementary approaches in one learning loop.
+
+### Story-first explanation
+
+Abstract ideas become easier to enter when the learner first experiences the problem they were invented to explain. Learn New may start with a fictional story, reveal the professional concept near the ending, and then map every important character, event, and decision back to the formal model.
+
+The story is a bridge, not a substitute for accuracy. Every story-led lesson must follow with a precise definition, mechanism, metaphor mapping, limitations, and at least one boundary or counterexample. Procedural, safety-critical, or time-sensitive topics use a more direct explanation when a story would delay or distort the answer.
 
 ### Feynman Technique
 
@@ -73,7 +83,9 @@ Choose a field or import learning materials
                     ↓
 Analyze the topic and build a sequential learning map
                     ↓
-Explain one concept in simple language
+Build intuition through a story without naming the concept too early
+                    ↓
+Reveal the concept and decode its definition, mechanism, metaphors, and boundaries
                     ↓
 Run a comprehension check
                     ↓
@@ -83,34 +95,60 @@ Restate, diagnose gaps, and ask targeted questions
                     ↓
 Update the cognitive calibration profile
                     ↓
+Schedule evidence-based review before the concept fades
+                    ↓
 Adjust the next learning step
 ```
 
 1. **Import or choose materials** — Start from a textbook, paper, note, or a built-in knowledge pack.
 2. **Build a learning map** — Create an ordered path showing what to learn, why it matters, how long it may take, and what counts as completion.
-3. **Learn simply** — Establish an intuitive mental model and keep a practical example visible.
-4. **Check understanding** — Let the learner decide when they are ready, then verify the claimed understanding.
-5. **Go deeper** — Switch between Feynman teach-back and Socratic questioning.
-6. **Receive teacher-style feedback** — The AI restates the learner’s meaning before addressing gaps.
-7. **Adapt the path** — Record learning evidence in a cognitive calibration profile and adjust what comes next.
+3. **Enter through a story** — For an abstract idea, experience the underlying problem before seeing the professional name.
+4. **Reveal and decode** — Connect the story to the formal definition, mechanism, metaphor mapping, limitations, and counterexamples.
+5. **Check understanding** — Verify retrieval and transfer only after the explanation is complete.
+6. **Go deeper** — Switch between Feynman teach-back and Socratic questioning.
+7. **Receive teacher-style feedback** — The AI restates the learner’s meaning before addressing gaps.
+8. **Review before forgetting** — Return to due concepts with a fresh example, counterexample, and teach-back instead of rereading.
+9. **Adapt the path** — Record learning evidence in a cognitive calibration profile and adjust what comes next.
 
 ## Product experience
 
-The web prototype is designed as a warm digital desk rather than a single chat window. It includes:
+The full-stack web app is designed as a warm digital desk rather than a single chat window. It includes:
 
 - a welcoming homepage with date, calendar, daily prompts, and lightweight updates;
 - an email sign-in flow;
 - a searchable domain bookshelf with built-in learning topics;
 - support for importing personal materials;
 - a sequential learning map;
-- simple explanation and comprehension-check stages;
+- a three-part story-first explanation: narrative setup, delayed concept reveal, and formal decoding;
+- a separate comprehension check before interactive learning;
 - visible Feynman and Socratic learning modes;
 - a learning center with progress, strengths, improvement areas, and guidance;
-- learning preferences, AI personality settings, privacy, and API configuration;
+- an account-synced 7-day learning sprint with a weekly goal, daily effort target, and evidence-based tasks;
+- an in-lesson evidence notebook for examples, boundaries, open questions, and Markdown export;
+- a spaced-review queue with due concepts, estimated effort, mastery context, and explicit completion evidence;
+- learning preferences, AI personality settings, privacy controls, and server-managed AI configuration;
 - responsive layouts for desktop and mobile;
 - Chinese, English, Japanese, and Korean language entry points.
 
 > 中文简述：网页体验采用粉紫色“数字书桌”风格，包含书架、学习地图、深度学习、学习中心和个性化设置。
+
+## Quick start
+
+```bash
+git clone https://github.com/liaxuan1206/Learn-New.git
+cd Learn-New/web
+npm install
+npm run dev
+```
+
+Then open the local URL printed in the terminal. The demo path works without a model key. Real AI analysis is enabled only through server-side environment variables; see [`web/DEPLOYMENT.md`](./web/DEPLOYMENT.md).
+
+Run the verification suite before opening a pull request:
+
+```bash
+npm test
+npm run build
+```
 
 ## Two ways to use Learn New
 
@@ -119,7 +157,7 @@ The web prototype is designed as a warm digital desk rather than a single chat w
 Use Learn New directly inside Codex as a structured learning workflow:
 
 ```text
-Use $learn-new to help me understand what an AI Agent is from scratch.
+Use $learn-new to help me understand what an AI Agent is from scratch with a story-first explanation.
 ```
 
 ```text
@@ -130,11 +168,9 @@ Use $learn-new to turn these materials into a learning map and begin with the fi
 Use $learn-new to review this topic with Feynman teach-back and Socratic questions.
 ```
 
-### 2. Run or deploy the web prototype
+### 2. Run or deploy the web app
 
-Download the packaged React + Vite source, run it locally, or deploy it to your own hosting provider and domain.
-
-The current web package is a public product prototype. Real accounts, cloud learning history, material parsing, and production AI calls still require a secure backend.
+Run the React + Vite + Worker source locally, or deploy it with a KV namespace and server-side AI environment variables. The current vertical slice includes real email authentication, HTTP-only sessions, account-scoped learning records, and an OpenAI-compatible server proxy. Material parsing, durable file storage, and voice input remain future integrations.
 
 ## Install the Skill
 
@@ -171,7 +207,7 @@ Restart Codex and invoke the Skill with `$learn-new`.
 
 ### `SKILL.md`
 
-The core instruction file for the learning workflow. It tells the AI when to activate Learn New, how to generate a learning map, how to teach and check understanding, and how to run Feynman or Socratic sessions.
+The core instruction file for the learning workflow. It tells the AI when to activate Learn New, how to generate a learning map, how to teach through a story and formal explanation, how to check understanding, and how to run Feynman or Socratic sessions.
 
 ### `agents/openai.yaml`
 
@@ -179,7 +215,7 @@ The interface metadata for the Skill. It controls how Learn New appears in the S
 
 ### `references/`
 
-Detailed teaching guidance loaded only when needed, including concept learning, practical skills, exam review, diagnostics, teach-backs, and Socratic questioning.
+Detailed teaching guidance loaded only when needed, including story-first explanations, concept learning, practical skills, exam review, diagnostics, teach-backs, and Socratic questioning.
 
 ### `AGENTS.md`
 
@@ -192,6 +228,9 @@ Durable instructions for coding agents that maintain this project. It protects t
 ```text
 Learn-New/
 ├── README.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── CHANGELOG.md
 ├── SKILL.md
 ├── AGENTS.md
 ├── agents/
@@ -200,14 +239,19 @@ Learn-New/
 │   └── learning-modes.md
 ├── learn-new-demo.gif
 ├── Learn-New-skill.zip
-└── Learn-New-web.zip
+├── Learn-New-web.zip
+└── web/
+    ├── src/
+    ├── server/
+    ├── worker/
+    ├── tests/
+    └── DEPLOYMENT.md
 ```
 
 ## Run and deploy the web app
 
-1. Download and extract [`Learn-New-web.zip`](./Learn-New-web.zip).
-2. Open the extracted project directory.
-3. Install dependencies and start the development server:
+1. Open the [`web`](./web) project directory.
+2. Install dependencies and start the local full-stack development server:
 
 ```bash
 npm install
@@ -220,23 +264,27 @@ Create a production build:
 npm run build
 ```
 
-The static output is generated in `dist/client`. You can deploy it to a static hosting provider or connect your own domain.
-
-For a production product, add secure server-side authentication, database storage, file processing, and AI API proxying. Never place user API keys directly in frontend code.
+The production build emits the frontend in `dist/client` and the Worker modules in `dist/server`. Copy `wrangler.example.jsonc` to `wrangler.jsonc`, bind a KV namespace, add `AI_API_KEY` as a deployment secret, and follow [`web/DEPLOYMENT.md`](./web/DEPLOYMENT.md). Never place model credentials in frontend code.
 
 > 中文：网页包可以本地运行或部署到自己的平台和域名；正式上线前仍需接入安全的后端服务。
 
 ## Project status
 
 - [x] Feynman teach-back and Socratic questioning Skill workflow
+- [x] Story-first explanation with delayed concept reveal and metaphor decoding
 - [x] Concept, practical-skill, and exam-learning scenarios
 - [x] Sequential learning maps and observable mastery evidence
 - [x] Responsive desktop and mobile prototype
 - [x] Chinese, English, Japanese, and Korean entry points
 - [x] Downloadable Skill and web source packages
-- [ ] Real email accounts and cloud learning history
+- [x] Real email accounts, HTTP-only sessions, and account-scoped learning history
+- [x] Deployable Worker API with KV persistence and server-side AI proxy
+- [x] Evidence-based review queue with due concepts and completion criteria
+- [x] Account-synced 7-day learning sprint with editable goals and daily tasks
+- [x] Source-grounded evidence notebook with autosave and Markdown export
+- [x] Automated test and production-build checks
 - [ ] Production material parsing and storage
-- [ ] Secure server-side AI integration with user-provided API keys
+- [x] Secure server-side OpenAI-compatible integration
 - [ ] Voice input and spoken teach-backs
 - [ ] Long-term adaptive learning paths based on evidence
 
@@ -255,9 +303,11 @@ For a production product, add secure server-side authentication, database storag
 Forks, self-hosted experiments, issues, and new learning scenarios are welcome. Useful directions include:
 
 - more natural Feynman teach-back feedback;
+- better story-to-concept mappings without sacrificing precision;
 - deeper but less frustrating Socratic questions;
 - document parsing and learning-map generation;
 - mature cognitive calibration for adult learners;
+- production-grade spaced repetition driven by real learning evidence;
 - multilingual and accessible experiences.
 
 ---
