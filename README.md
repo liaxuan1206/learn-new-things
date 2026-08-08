@@ -15,10 +15,12 @@
 <p align="center">
   <a href="#install-the-skill"><strong>Install the Skill</strong></a>
   ·
-  <a href="#run-and-deploy-the-web-app"><strong>Run the Web App</strong></a>
+  <a href="#quick-start"><strong>Quick Start</strong></a>
   ·
   <a href="#project-status"><strong>Project Status</strong></a>
 </p>
+
+> **Current release:** a deployable full-stack vertical slice with real email sessions, account-scoped learning records, a server-side model proxy, and an evidence-based review loop. No frontend API keys.
 
 ## Animated Product Tour
 
@@ -93,6 +95,8 @@ Restate, diagnose gaps, and ask targeted questions
                     ↓
 Update the cognitive calibration profile
                     ↓
+Schedule evidence-based review before the concept fades
+                    ↓
 Adjust the next learning step
 ```
 
@@ -103,11 +107,12 @@ Adjust the next learning step
 5. **Check understanding** — Verify retrieval and transfer only after the explanation is complete.
 6. **Go deeper** — Switch between Feynman teach-back and Socratic questioning.
 7. **Receive teacher-style feedback** — The AI restates the learner’s meaning before addressing gaps.
-8. **Adapt the path** — Record learning evidence in a cognitive calibration profile and adjust what comes next.
+8. **Review before forgetting** — Return to due concepts with a fresh example, counterexample, and teach-back instead of rereading.
+9. **Adapt the path** — Record learning evidence in a cognitive calibration profile and adjust what comes next.
 
 ## Product experience
 
-The web prototype is designed as a warm digital desk rather than a single chat window. It includes:
+The full-stack web app is designed as a warm digital desk rather than a single chat window. It includes:
 
 - a welcoming homepage with date, calendar, daily prompts, and lightweight updates;
 - an email sign-in flow;
@@ -118,11 +123,32 @@ The web prototype is designed as a warm digital desk rather than a single chat w
 - a separate comprehension check before interactive learning;
 - visible Feynman and Socratic learning modes;
 - a learning center with progress, strengths, improvement areas, and guidance;
-- learning preferences, AI personality settings, privacy, and API configuration;
+- an account-synced 7-day learning sprint with a weekly goal, daily effort target, and evidence-based tasks;
+- an in-lesson evidence notebook for examples, boundaries, open questions, and Markdown export;
+- a spaced-review queue with due concepts, estimated effort, mastery context, and explicit completion evidence;
+- learning preferences, AI personality settings, privacy controls, and server-managed AI configuration;
 - responsive layouts for desktop and mobile;
 - Chinese, English, Japanese, and Korean language entry points.
 
 > 中文简述：网页体验采用粉紫色“数字书桌”风格，包含书架、学习地图、深度学习、学习中心和个性化设置。
+
+## Quick start
+
+```bash
+git clone https://github.com/liaxuan1206/Learn-New.git
+cd Learn-New/web
+npm install
+npm run dev
+```
+
+Then open the local URL printed in the terminal. The demo path works without a model key. Real AI analysis is enabled only through server-side environment variables; see [`web/DEPLOYMENT.md`](./web/DEPLOYMENT.md).
+
+Run the verification suite before opening a pull request:
+
+```bash
+npm test
+npm run build
+```
 
 ## Two ways to use Learn New
 
@@ -142,11 +168,9 @@ Use $learn-new to turn these materials into a learning map and begin with the fi
 Use $learn-new to review this topic with Feynman teach-back and Socratic questions.
 ```
 
-### 2. Run or deploy the web prototype
+### 2. Run or deploy the web app
 
-Download the packaged React + Vite source, run it locally, or deploy it to your own hosting provider and domain.
-
-The current web package is a public product prototype. Real accounts, cloud learning history, material parsing, and production AI calls still require a secure backend.
+Run the React + Vite + Worker source locally, or deploy it with a KV namespace and server-side AI environment variables. The current vertical slice includes real email authentication, HTTP-only sessions, account-scoped learning records, and an OpenAI-compatible server proxy. Material parsing, durable file storage, and voice input remain future integrations.
 
 ## Install the Skill
 
@@ -204,6 +228,9 @@ Durable instructions for coding agents that maintain this project. It protects t
 ```text
 Learn-New/
 ├── README.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── CHANGELOG.md
 ├── SKILL.md
 ├── AGENTS.md
 ├── agents/
@@ -212,14 +239,19 @@ Learn-New/
 │   └── learning-modes.md
 ├── learn-new-demo.gif
 ├── Learn-New-skill.zip
-└── Learn-New-web.zip
+├── Learn-New-web.zip
+└── web/
+    ├── src/
+    ├── server/
+    ├── worker/
+    ├── tests/
+    └── DEPLOYMENT.md
 ```
 
 ## Run and deploy the web app
 
-1. Download and extract [`Learn-New-web.zip`](./Learn-New-web.zip).
-2. Open the extracted project directory.
-3. Install dependencies and start the development server:
+1. Open the [`web`](./web) project directory.
+2. Install dependencies and start the local full-stack development server:
 
 ```bash
 npm install
@@ -232,9 +264,7 @@ Create a production build:
 npm run build
 ```
 
-The static output is generated in `dist/client`. You can deploy it to a static hosting provider or connect your own domain.
-
-For a production product, add secure server-side authentication, database storage, file processing, and AI API proxying. Never place user API keys directly in frontend code.
+The production build emits the frontend in `dist/client` and the Worker modules in `dist/server`. Copy `wrangler.example.jsonc` to `wrangler.jsonc`, bind a KV namespace, add `AI_API_KEY` as a deployment secret, and follow [`web/DEPLOYMENT.md`](./web/DEPLOYMENT.md). Never place model credentials in frontend code.
 
 > 中文：网页包可以本地运行或部署到自己的平台和域名；正式上线前仍需接入安全的后端服务。
 
@@ -247,9 +277,14 @@ For a production product, add secure server-side authentication, database storag
 - [x] Responsive desktop and mobile prototype
 - [x] Chinese, English, Japanese, and Korean entry points
 - [x] Downloadable Skill and web source packages
-- [ ] Real email accounts and cloud learning history
+- [x] Real email accounts, HTTP-only sessions, and account-scoped learning history
+- [x] Deployable Worker API with KV persistence and server-side AI proxy
+- [x] Evidence-based review queue with due concepts and completion criteria
+- [x] Account-synced 7-day learning sprint with editable goals and daily tasks
+- [x] Source-grounded evidence notebook with autosave and Markdown export
+- [x] Automated test and production-build checks
 - [ ] Production material parsing and storage
-- [ ] Secure server-side AI integration with user-provided API keys
+- [x] Secure server-side OpenAI-compatible integration
 - [ ] Voice input and spoken teach-backs
 - [ ] Long-term adaptive learning paths based on evidence
 
@@ -272,6 +307,7 @@ Forks, self-hosted experiments, issues, and new learning scenarios are welcome. 
 - deeper but less frustrating Socratic questions;
 - document parsing and learning-map generation;
 - mature cognitive calibration for adult learners;
+- production-grade spaced repetition driven by real learning evidence;
 - multilingual and accessible experiences.
 
 ---

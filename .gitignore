@@ -1,0 +1,11 @@
+web/node_modules/
+web/dist/
+web/qa/
+web/.env
+web/.env.local
+web/.dev.vars
+web/wrangler.jsonc
+release-staging/
+downloads/
+*.log
+.DS_Store
